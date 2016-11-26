@@ -32,6 +32,6 @@
 *.dSYM/
 *.su
 .nore/
-configure
-Makefile
+/configure
+/Makefile
 objs/

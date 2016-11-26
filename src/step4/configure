@@ -1,0 +1,9 @@
+
+nm_feature="have exp2 fn"
+nm_feature_name="nm_have_exp2_fn"
+nm_feature_run=no
+nm_feature_incs="#include <math.h>"
+nm_feature_path=
+nm_feature_libs=
+nm_feature_test="long double x=exp2(2.0);"
+. ${NM_HOME}auto/feature
