@@ -8,7 +8,7 @@ step2_lflags="\$(LFLAGS) \$(INC)"
 if [ 1 -eq $USE_MYMATH ]; then
 	if [ "$CC_NAME" == "msvc" ]; then
 		#flag=sqrt_lib value="\$(lib_path)libsqrt.lib" . ${NM_HOME}auto/cflags
-		step2_lflags="$step2_lflags \$(lib_path)libsqrt.lib"
+		step2_lflags="$step2_lflags ${lib_path}libsqrt.lib"
 	else
 		step2_lflags="$step2_lflags \$(LDLIBS) -lsqrt"
 	fi
