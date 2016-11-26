@@ -29,7 +29,7 @@ int main (int argc, char *argv[]) {
         fprintf(stdout,"%s Version %d.%d\n", argv[0],
                 MAJOR_VER,
                 MINOR_VER);
-        fprintf(stdout,"Usage: %s number\n",argv[0]);
+        fprintf(stdout,"Usage: %s number\n", argv[0]);
         return 1;
     }
 

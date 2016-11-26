@@ -7,6 +7,7 @@
     #include "sqrt.h"
 #else
     #include <math.h>
+		#define _sqrt_(x) (sqrt((x)))
 #endif
 
 #define MAJOR_VER ((STEP2_VERSION & 0xff00) > 8)
@@ -22,7 +23,7 @@ int main (int argc, char *argv[]) {
     }
  
     double inputValue = atof(argv[1]);
-    double outputValue = sqrt(inputValue);
+    double outputValue = _sqrt_(inputValue);
  
     fprintf(stdout,"The square root of %g is %g\n",
             inputValue, outputValue);

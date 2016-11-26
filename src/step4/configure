@@ -8,14 +8,8 @@ nm_feature_libs=
 nm_feature_test="long double x=exp2(2.0);"
 . ${NM_HOME}auto/feature
 
-step4_lflags="\$(LFLAGS) \$(LDLIBS) \$(INC)" 
-case $CC_NAME in
-	gcc)
-		step4_lflags="$step4_lflags -lm"
-		;;
-	*)
-		;;
-esac
+step4_lflags="\$(LFLAGS) \$(INC)" 
+[ "$CC_NAME" == "gcc" ] && step4_lflags="$step4_lflags -lm"
 
 flag=step4_lflags value="$step4_lflags"	. ${NM_HOME}auto/cflags
 
