@@ -7,3 +7,12 @@ nm_feature_path=
 nm_feature_libs=
 nm_feature_test="long double x=exp2(2.0);"
 . ${NM_HOME}auto/feature
+
+case $CC_NAME in
+	gcc)
+		flag=step4_lflags value="$LFLAGS -lm"	. ${NM_HOME}auto/cflags
+		;;
+	*)
+		;;
+esac
+
