@@ -1,5 +1,5 @@
 
-#include "nm_auto_config.h"
+#include <nm_auto_config.h>
 #include <stdio.h>
 #include <stdlib.h>
 

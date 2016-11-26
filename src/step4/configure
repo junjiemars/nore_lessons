@@ -1,5 +1,5 @@
 
-nm_feature="have exp2 fn"
+nm_feature="exp2 fn"
 nm_feature_name="nm_have_exp2_fn"
 nm_feature_run=no
 nm_feature_incs="#include <math.h>"
@@ -10,7 +10,8 @@ nm_feature_test="long double x=exp2(2.0);"
 
 case $CC_NAME in
 	gcc)
-		flag=step4_lflags value="$LFLAGS -lm"	. ${NM_HOME}auto/cflags
+		flag=step4_lflags value="\$(LFLAGS) \$(LDLIBS) \$(INC) -lm"	\
+		. ${NM_HOME}auto/cflags
 		;;
 	*)
 		;;

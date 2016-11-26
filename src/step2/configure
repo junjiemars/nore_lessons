@@ -3,7 +3,7 @@ USE_MYMATH=1
 
 have=USE_MYMATH value=$USE_MYMATH . ${NM_HOME}auto/define
 
-step2_lflags="$LFLAGS"
+step2_lflags="\$(LFLAGS) \$(INC) \$(LDLIBS)"
 [ 1 -eq $USE_MYMATH ] && step2_lflags="$step2_lflags -lsqrt"
 
 flag=step2_lflags value="$step2_lflags" . ${NM_HOME}auto/cflags

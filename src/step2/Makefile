@@ -3,8 +3,6 @@ step2_binout := $(bin_path)step2$(bin_ext)
 
 step2: sqrt $(bin_path)step2$(bin_ext)
 
-step2_lflags += $(INC) $(LDLIBS)
-
 $(step2_binout): $(src_path)step2.c
 	$(LINK) $(step2_lflags) $^ $(bin_out)$@
 

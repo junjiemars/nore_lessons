@@ -3,5 +3,10 @@ step1_binout := $(bin_path)step1$(bin_ext)
 
 step1: $(step1_binout)
 
+step1_lflags += $(LFLAGS) $(INC)
+ifeq ($(CC_NAME), gcc)
+	step1_lflags += -lm
+endif
+
 $(step1_binout): $(src_path)step1.c
-	$(CC) $(CFLAGS) $(INC) -lm $^ $(bin_out)$@
+	$(CC) $(step1_lflags) $^ $(bin_out)$@
