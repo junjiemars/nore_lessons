@@ -4,13 +4,13 @@ USE_MYMATH=1
 have=USE_MYMATH value=$USE_MYMATH . ${NM_HOME}auto/define
 
 step2_lflags="\$(LFLAGS) \$(INC)"
-sqrt_lib=
 
 if [ 1 -eq $USE_MYMATH ]; then
 	if [ "$CC_NAME" == "msvc" ]; then
-		flag=sqrt_lib value="\$(lib_path)libsqrt.lib" . ${NM_HOME}auto/cflags
+		#flag=sqrt_lib value="\$(lib_path)libsqrt.lib" . ${NM_HOME}auto/cflags
+		step2_lflags="$step2_lflags \$(lib_path)libsqrt.lib"
 	else
-		step2_lflags="-lsqrt"
+		step2_lflags="$step2_lflags \$(LDLIBS) -lsqrt"
 	fi
 fi
 
