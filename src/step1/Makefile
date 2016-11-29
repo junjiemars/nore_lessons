@@ -5,6 +5,7 @@ step1: $(step1_binout)
 
 step1_lflags += $(LFLAGS) $(INC)
 ifeq ($(CC_NAME), gcc)
+	#gcc/ld -l<xyz> has reversed order
 	step1_lflags += -lm
 endif
 
