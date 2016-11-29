@@ -4,7 +4,7 @@ step1_binout := $(bin_path)step1$(bin_ext)
 step1: $(step1_binout)
 
 step1_lflags += $(LFLAGS) $(INC)
-ifeq ($(CC_NAME), gcc)
+ifeq ($(NM_SYSTEM), Linux)
 	#gcc/ld -l<xyz> has reversed order
 	step1_lflags += -lm
 endif
