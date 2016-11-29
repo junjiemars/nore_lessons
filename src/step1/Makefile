@@ -9,7 +9,7 @@ ifeq ($(CC_NAME), gcc)
 endif
 
 $(step1_binout): $(src_path)step1.c
-	$(CC) $(step1_lflags) $^ $(bin_out)$@
+	$(CC) $^ $(bin_out)$@ $(step1_lflags) 
 
 step1_test: step1
 	$(step1_binout) 2
