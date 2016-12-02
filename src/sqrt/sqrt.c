@@ -9,7 +9,7 @@ double sqrt_iter(double, double);
 double good_enough(double, double);
 double improve(double, double);
 
-double _sqrt_(double n) {
+double SQRT_API _sqrt_(double n) {
     return sqrt_iter(1.0, n);
 }
 
